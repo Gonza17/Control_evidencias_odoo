@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+
+<odoo>
+<data>
+
+    <!-- VISTA FORM: Clase Ejemplo -->
+    <record model="ir.ui.view" id="view_claseejemplo_form">
+        <field name="name">claseejemplo.form</field>
+        <field name="model">claseejemplo</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="claseejemplo">
+            <group col="4" colspan="2">
+                <field name="binario" select="1"/>
+                <field name="entero" select="2"/>
+                <field name="caracter" select="0"/>
+                <field name="boleano" select="0"/>
+                <field name="fecha" select="0"/>
+                <field name="hora" select="0"/>
+                <separator string='Texto' colspan="4"/>
+                <field name="texto" colspan="4" nolabel="1" select="0"/>
+                <field name="flotante" select="0"/>
+                <field name="seleccion" select="0"/>
+                <field name="muchosuno_id" select="0"/>
+                <separator string='Uno a Muchos' colspan="4"/>
+                <field name="unomuchos_ids" colspan="4" nolabel="1" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: Clase Ejemplo -->
+
+    <!-- VISTA TREE: Clase Ejemplo -->
+    <record model="ir.ui.view" id="view_claseejemplo_tree">
+        <field name="name">claseejemplo.tree</field>
+        <field name="model">claseejemplo</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="claseejemplo">
+                <field name="binario"/>
+                <field name="entero"/>
+                <field name="caracter"/>
+                <field name="boleano"/>
+                <field name="fecha"/>
+                <field name="hora"/>
+                <field name="texto"/>
+                <field name="flotante"/>
+                <field name="seleccion"/>
+                <field name="muchosuno_id"/>
+
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: Clase Ejemplo -->
+
+    <!-- MODELO: Clase Ejemplo -->
+    <record model="ir.actions.act_window" id="action_claseejemplo">
+        <field name="name">Clase Ejemplo</field>
+        <field name="res_model">claseejemplo</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- FIN MODELO: Clase Ejemplo -->
+
+    <!-- MENÚ SECUNDARIO: Clase Ejemplo -->
+    <menuitem name="Clase Ejemplo" id="menu_claseejemplo" action="action_claseejemplo" parent="men_sec"/>
+        
+    <!-- VISTA FORM: Muchos a Uno -->
+    <record model="ir.ui.view" id="view_muchosuno_form">
+        <field name="name">muchosuno.form</field>
+        <field name="model">muchosuno</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="muchosuno">
+            <group col="4" colspan="2">
+                <field name="dni" select="1"/>
+                <field name="nombres" select="2"/>
+                <field name="apellidos" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: Muchos a Uno -->
+
+    <!-- VISTA TREE: Muchos a Uno -->
+    <record model="ir.ui.view" id="view_muchosuno_tree">
+        <field name="name">muchosuno.tree</field>
+        <field name="model">muchosuno</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="muchosuno">
+                <field name="dni"/>
+                <field name="nombres"/>
+                <field name="apellidos"/>
+
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: Muchos a Uno -->
+
+    <!-- MODELO: Muchos a Uno -->
+    <record model="ir.actions.act_window" id="action_muchosuno">
+        <field name="name">Muchos a Uno</field>
+        <field name="res_model">muchosuno</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- FIN MODELO: Muchos a Uno -->
+
+    <!-- MENÚ SECUNDARIO: Muchos a Uno -->
+    <menuitem name="Muchos a Uno" id="menu_muchosuno" action="action_muchosuno" parent="men_sec"/>
+        
+    <!-- VISTA FORM: Uno a Muchos -->
+    <record model="ir.ui.view" id="view_unomuchos_form">
+        <field name="name">unomuchos.form</field>
+        <field name="model">unomuchos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="unomuchos">
+            <group col="4" colspan="2">
+                <field name="unomuchos_id" select="1"/>
+                <field name="telefono" select="2"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: Uno a Muchos -->
+
+    <!-- VISTA TREE: Uno a Muchos -->
+    <record model="ir.ui.view" id="view_unomuchos_tree">
+        <field name="name">unomuchos.tree</field>
+        <field name="model">unomuchos</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="unomuchos">
+                <field name="unomuchos_id"/>
+                <field name="telefono"/>
+
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: Uno a Muchos -->
+
+    <!-- MODELO: Uno a Muchos -->
+    <record model="ir.actions.act_window" id="action_unomuchos">
+        <field name="name">Uno a Muchos</field>
+        <field name="res_model">unomuchos</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- FIN MODELO: Uno a Muchos -->
+
+    <!-- MENÚ SECUNDARIO: Uno a Muchos -->
+    <menuitem name="Uno a Muchos" id="menu_unomuchos" action="action_unomuchos" parent="men_sec"/>
+        
+
+    <!-- MENÚ PRINCIPAL -->
+    <menuitem name="MENU" id="men_pri"/>
+    <!-- MENÚ SECUNDARIO -->
+    <menuitem name="MENU SECUNDARIO" id="men_sec" parent="men_pri"/>
+
+</data>
+</odoo>

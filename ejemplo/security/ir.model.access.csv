@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_claseejemplo","claseejemplo","model_claseejemplo","base.group_user",1,1,1,1
+"access_muchosuno","muchosuno","model_muchosuno","base.group_user",1,1,1,1
+"access_unomuchos","unomuchos","model_unomuchos","base.group_user",1,1,1,1
