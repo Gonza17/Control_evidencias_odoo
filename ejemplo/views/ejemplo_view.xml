@@ -63,8 +63,7 @@
     </record>
     <!-- FIN MODELO: Clase Ejemplo -->
 
-    <!-- MENÚ SECUNDARIO: Clase Ejemplo -->
-    <menuitem name="Clase Ejemplo" id="menu_claseejemplo" action="action_claseejemplo" parent="men_sec"/>
+   
         
     <!-- VISTA FORM: Muchos a Uno -->
     <record model="ir.ui.view" id="view_muchosuno_form">
@@ -109,8 +108,7 @@
     </record>
     <!-- FIN MODELO: Muchos a Uno -->
 
-    <!-- MENÚ SECUNDARIO: Muchos a Uno -->
-    <menuitem name="Muchos a Uno" id="menu_muchosuno" action="action_muchosuno" parent="men_sec"/>
+  
         
     <!-- VISTA FORM: Uno a Muchos -->
     <record model="ir.ui.view" id="view_unomuchos_form">
@@ -153,14 +151,20 @@
     </record>
     <!-- FIN MODELO: Uno a Muchos -->
 
-    <!-- MENÚ SECUNDARIO: Uno a Muchos -->
-    <menuitem name="Uno a Muchos" id="menu_unomuchos" action="action_unomuchos" parent="men_sec"/>
+   
         
 
     <!-- MENÚ PRINCIPAL -->
     <menuitem name="MENU" id="men_pri"/>
     <!-- MENÚ SECUNDARIO -->
     <menuitem name="MENU SECUNDARIO" id="men_sec" parent="men_pri"/>
+    
+ <!-- MENÚ SECUNDARIO: Clase Ejemplo -->
+    <menuitem name="Clase Ejemplo" id="menu_claseejemplo" action="action_claseejemplo" parent="men_sec"/>
+  <!-- MENÚ SECUNDARIO: Muchos a Uno -->
+    <menuitem name="Muchos a Uno" id="menu_muchosuno" action="action_muchosuno" parent="men_sec"/>
+ <!-- MENÚ SECUNDARIO: Uno a Muchos -->
+    <menuitem name="Uno a Muchos" id="menu_unomuchos" action="action_unomuchos" parent="men_sec"/>
 
 </data>
 </odoo>
